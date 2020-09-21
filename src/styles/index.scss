@@ -1,1 +1,53 @@
-ECHO is on.
+@font-face{
+    font-family: 'arvo';
+    src: url('../../src/assets/fonts/Arvo-Regular.ttf')
+}
+@font-face{
+    font-family: 'arvo_italic';
+    src: url('../../src/assets/fonts/Arvo-Italic.ttf')
+}
+@font-face{
+    font-family: 'arvo_bold';
+    src: url('../../src/assets/fonts/Arvo-Bold.ttf')
+}
+$darkgrey_transparent:rgba(70,70,70,0.5);
+header, nav, main, aside, footer, article, section {
+    display: block;
+  }
+body {
+    // background-color: pink;
+    margin: 0;
+    font-family: 'arvo';
+}
+
+.menu{
+    display:flex;
+    height: 80px;
+    width: 100%;
+    // background-color: cornflowerblue;
+    justify-content: center;
+    -webkit-box-shadow: 0.1px 0.1px 5px 1px rgba(70,70,70,0.5);
+    box-shadow: 0.1px 0.1px 5px 1px rgba(70,70,70,0.5);
+    .logo{
+        width:150px;
+        margin:0 10px;
+        background-color: #f00;
+    }
+    .menu__button{
+        display: flex;
+        width: 200px;
+        padding:0 10px;
+        // background-color: cyan;
+        align-items:center;
+        justify-content:center;
+        border-left:$darkgrey_transparent 2px solid;
+    }
+}
+main{
+    height: 1000px;
+}
+footer{
+    -webkit-box-shadow: 0.1px 0.1px 5px 1px rgba(70,70,70,0.5);
+    box-shadow: 0.1px 0.1px 5px 1px rgba(70,70,70,0.5);
+    height: 300px;
+}
