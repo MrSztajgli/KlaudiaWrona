@@ -1,0 +1,83 @@
+.media-button{
+    &,
+    &:link,
+    &:visited{
+        display: block;
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+        line-height: 4rem;
+        transition: all .4s;
+        left: 2rem;
+    }
+
+    &:hover{
+        box-shadow: -2rem 1rem 2rem rgba($color-black,.2);
+        color: $color-grey;
+        background-color: $color-white;
+        cursor: pointer;
+
+        &::after{
+            opacity: 1; 
+            top: 0;
+            height: 4rem;
+            box-shadow: -1rem 1rem 2rem rgba($color-black,.2);
+        }
+    }
+
+    &::after{
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 2.65rem;
+        top: .675rem;
+        left: 2rem;
+        padding-left: 1rem;
+        border-radius: inherit;
+        color: $color-grey;
+        background-color: $color-white;
+        z-index: -1;
+        transition: all .4s;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+    }
+
+    &--lang{
+        top: 3rem;
+        font-size: 2.5rem;
+
+        &::after{
+            content:""
+        }
+
+        &:hover::after{
+            width: 8rem;
+        }
+    }
+
+    &--phone{
+        top: 5rem;
+        font-size: 3rem;
+
+        &::after{
+            content:"999 999 999";
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        &:hover::after{
+            width: 15rem;
+        }
+    }
+
+    
+}
