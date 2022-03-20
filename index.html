@@ -1,34 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrSztajgli Boilerplate</title>
-    <link href="dist/styles/index.css" rel="stylesheet">
+    
+    <!-- desc -->
+    <title>Klaudia Wrona</title>
+    <meta name="author" content="Wiktor Sztajgli">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <!-- icon-font linea -->
+    <link rel="stylesheet" href="dist/css/icon-font.css">
 
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- font-awesome icons -->
+    <script src="https://kit.fontawesome.com/efadc97638.js" crossorigin="anonymous"></script>
+    
     <!-- [if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
     <![endif]-->
+
+    <!-- some script -->
+    <script>
+        function closeNav(nav_ID) {
+            document.getElementById("navi-toggle").checked = false;
+            scrollTo(nav_ID);
+        }
+
+        function scrollTo(nav_ID){
+            document.getElementById(nav_ID).scrollIntoView({behavior: "smooth", block: "center"});
+        }
+    </script>
+
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <div class="logo"></div>
-            <div class="menu__button">o nas</div>
-            <div class="menu__button">nasza praca</div>
-            <div class="menu__button">oferta</div>
-            <div class="menu__button" style="border-right:rgba(70,70,70,0.5) 2px solid;">kontakt</div>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#Foo" class="navigation__link" onclick="closeNav('about')"><span>01</span>Lorem Ipsum</a></li>
+                <li class="navigation__item"><a href="#Foo" class="navigation__link" onclick="closeNav('features')"><span>02</span>Lorem Ipsum</a></li>
+                <li class="navigation__item"><a href="#Foo" class="navigation__link" onclick="closeNav('producers')"><span>03</span>Lorem Ipsum</a></li>
+                <li class="navigation__item"><a href="#Foo" class="navigation__link" onclick="closeNav('tunisia')"><span>04</span>Lorem Ipsum</a></li>
+                <li class="navigation__item"><a href="#Foo" class="navigation__link" onclick="closeNav('contact')"><span>05</span>Lorem Ipsum</a></li>
+            </ul>
         </nav>
+    </div>
+
+    <header class="header">
+
+        <!-- logo -->
+        <div class="logo-box">
+            <!-- <img src="" alt="logo.png" class="logo"> -->
+        </div>
+
+        <!-- switch language button -->
+        <div class="media-button media-button--lang"><i class="fas fa-flag-usa"></i></div>
+
+         <!-- telephone -->
+         <div class="media-button media-button--phone"><i class="fas fa-phone-square"></i></div>
+
+        <!-- title -->
+        <div class="header__title-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Lorem ipsum</span>
+                <span class="heading-primary--sub">Lorem ipsum dolor sit amet</span>
+            </h1>
+        </div>
 
     </header>
-    <main>
+ 
+    <body>
+        <section class="section-about" id="about">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Lorem Ipsum dolor sit amet
+                </h2>
+            </div>
 
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum dolor sit amet</h3>
+                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt? Vitae et a non, rem unde deserunt rerum labore nihil officiis molestias maiores praesentium illo nesciunt quos?</p>
+ 
+                    <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum dolor sit amet</h3>
+                    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt? Vitae et a non, rem unde deserunt rerum labore nihil officiis molestias maiores praesentium illo nesciunt quos?</p>
+                </div>
 
-    </main>
+                <div class="col-1-of-2">
+                   <div class="composition">
+                       <img src="./src/assets/img/placeholder.png" alt="Photo_1" class="composition__photo composition__photo--p1">
+                       <img src="./src/assets/img/placeholder.png" alt="Photo_2" class="composition__photo composition__photo--p2">
+                       <img src="./src/assets/img/placeholder.png" alt="Photo_3" class="composition__photo composition__photo--p3">
+                   </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <div class=""></div>
+        <section class="section-features" id="features">
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-gear"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt?
+                        </p>
+                    </div>
+                </div>
 
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-gear"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-gear"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-gear"></i>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis tempora animi ut sunt?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-producers" id="producers">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Lorem Ipsum dolor sit amet
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">Avon</span>
+                            </h4>
+                            <div class="card__details">
+                               <ul>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                               </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__back-image card__back-image--1"></div>
+                                <a href="#" class="btn btn--white">obejrzyj produkty!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">Ziaja</span>
+                            </h4>
+                            <div class="card__details">
+                               <ul>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                               </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__back-image card__back-image--2"></div>
+                                <a href="#" class="btn btn--white">obejrzyj produkty!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">Duolife</span>
+                            </h4>
+                            <div class="card__details">
+                               <ul>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                                   <li>Lorem ipsum</li>
+                               </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__back-image card__back-image--3"></div>
+                                <a href="#" class="btn btn--white">obejrzyj produkty!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-tunisia" id="tunisia">
+            <div class="bg-img">
+                <img src="./src/assets/img/tunisia-bg.jpg" alt="Tunezja-tło">
+            </div>
+
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Lorem Ipsum dolor sit amet
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="info-box">
+                    <figure class="info-box__shape">
+                        <img src="./src/assets/img/tunisia-circle.jpg" alt="Herb Garden" class="info-box__img">
+                        <figcaption class="info-box__caption">Import żywności</figcaption>
+                    </figure>
+
+                    <div class="info-box__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem Ipsum dolor sit amet consectetur</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quam erat, vehicula id egestas ac, tincidunt at lorem. Donec massa erat, ultrices at scelerisque semper, dictum in ligula. Phasellus arcu nisi, blandit in molestie a, scelerisque ac augue. In hac habitasse platea dictumst. Integer maximus sodales nisi, et sodales dolor consectetur ut. Proin eget bibendum ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section class="section-contact" id="contact">
+            <div class="row">
+                <div class="contact">
+                    <div class="contact__form">
+                        <form action="#" class="form">
+                            <div class="u-center-text u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Skontaktuj się z nami
+                                </h2>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Imię i Nazwisko" id="name" required>
+                                <label for="name" class="form__label">Imię i Nazwisko</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Adres email" id="email" required>
+                                <label for="email" class="form__label">Adres email</label>
+                            </div>
+
+                            <div class="form__group">
+                                <textarea type="text" class="form__textarea" placeholder="Wiadomość....." id="subject" required></textarea>
+                                <label for="subject" class="form__label">Wiadomość</label>
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn btn--yellow">Wyślij</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </section>
+    </body>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="" alt="Pelne logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__link">Lorem</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Lorem</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Lorem</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Lorem</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Lorem</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">Utworzone przez <a href="#" class="footer__link">Wiktor Sztajgli</a> na podstawie projektu Jonasa Schmedtmann'a. <br>&copy; Wszelkie prawa zastrzeżone. </p>
+            </div>
+        </div>
         
     </footer>
     <script src="src/js/index.js"></script>
